@@ -1,3 +1,2 @@
 # Niskize Counselling Center.
- # A web-based platform that allows for appointment booking
- 
+ # An online appointment booking platform for a counselling centre.
