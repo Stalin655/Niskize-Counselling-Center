@@ -1,3 +1,4 @@
+/*! Designing of cover page/ homepage */;	
 <!DOCTYPE html>
 <html>
 <body style="background-image:url(images/12.jpg)">
