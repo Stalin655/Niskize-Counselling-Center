@@ -6,7 +6,7 @@
 <body style="background-image:url(images/cancelback.jpg)">
 	<div class="header">
 		<ul>
-			<li style="float:left;border-right:none"><a href="ulogin.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><strong> Niskize Counselling Center </strong>Appointment Booking System</a></li>
+			<li style="float:left;border-right:none"><a href="ulogin.php" class="logo"><strong> Niskize Counselling Center </strong>Appointment Booking System</a></li>
 			<li><a href="ulogin.php">Home</a></li>
 		</ul>
 	</div>

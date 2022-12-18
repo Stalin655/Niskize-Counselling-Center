@@ -12,19 +12,6 @@
 </div>
 <form action="signup.php" method="post">
 	<div class="sucontainer">
-		<label><b>Name:</b></label><br>
-		<input type="text" placeholder="Enter Full Name" name="fname" required><br>
-	
-		<label><b>Date of Birth:</b></label><br>
-		<input type="date" name="dob" required><br><br>
-	
-		<label><b>Gender</b></label><br>
-		<input type="radio" name="gender" value="female">Female
-		<input type="radio" name="gender" value="male">Male
-		<input type="radio" name="gender" value="other">Other<br><br>
-		
-		<label><b>Contact No:</b></label><br>
-		<input type="number" placeholder="Contact Number" name="contact" required><br>
 		
 		<label><b>Username:</b></label><br>
 		<input type="text" placeholder="Create Username" name="username" required><br>
@@ -35,11 +22,11 @@
 		<label><b>Password:</b></label><br>
 		<input type="password" placeholder="Enter Password" name="pwd" id="p1" required><br>
 
-		<label><b>Repeat Password:</b></label><br>
+		<label><b>Confirm Password:</b></label><br>
 		<input type="password" placeholder="Repeat Password" name="pwdr" id="p2" required><br>
-		<p style="color:white">By creating an account you agree to our <a href="#" style="color:blue">Terms & Conditions</a>.</p><br>
+		
 
-		<div class="container" style="background-color:grey">
+		<div class="container" style="background-color:blue">
 			<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
 			<button type="submit" name="signup" style="float:right">Sign Up</button>
 		</div>
@@ -49,15 +36,12 @@
 function newUser()
 {
 		include 'dbconfig.php';
-		$name=$_POST['fname'];
-		$gender=$_POST['gender'];
-		$dob=$_POST['dob'];
-		$contact=$_POST['contact'];
+		
 		$email=$_POST['email'];
 		$username=$_POST['username'];
 		$password=$_POST['pwd'];
 		$prepeat=$_POST['pwdr'];
-		$sql = "INSERT INTO Patient (Name, Gender, DOB,Contact,Email,Username,Password) VALUES ('$name','$gender','$dob','$contact','$email','$username','$password') ";
+		$sql = "INSERT INTO Patient (Username,Email,Password) VALUES ('$username','$email','$password')";
 
 	if (mysqli_query($conn, $sql)) 
 	{
@@ -95,7 +79,7 @@ function checkusername()
 }
 if(isset($_POST['signup']))
 {
-	if(!empty($_POST['username']) && !empty($_POST['pwd']) &&!empty($_POST['fname']) &&!empty($_POST['dob'])&& !empty($_POST['gender']) &&!empty($_POST['email']) && !empty($_POST['contact']))
+	if(!empty($_POST['username']) && !empty($_POST['pwd'])  &&!empty($_POST['email']))
 			checkusername();
 }
 ?>
